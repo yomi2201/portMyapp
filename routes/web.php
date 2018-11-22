@@ -25,6 +25,6 @@ Route::get('create', 'PostsController@create');
 Route::post('create', 'PostsController@store');
 Route::get('edit/{id}', 'PostsController@edit');
 Route::post('edit', 'PostsController@update');
-Route::get('destroy/{id}', 'PostsController@show');
-Route::post('destroy', 'PostsController@destroy');
+Route::get('delete/{id}', 'PostsController@show');
+Route::post('delete', 'PostsController@delete');
 // Route::resource('/posts', 'PostsController', ['only' => ['create', 'store']]);

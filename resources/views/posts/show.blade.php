@@ -3,7 +3,7 @@
 @section('content')
 <h1>ブログ削除</h1>
 
-<form method="post" action="destroy">
+<form method="post" action="/delete">
   {{ csrf_field() }}
   <input type="hidden" class="form-control" name="id" value="{{ $post->id }}">
   <div class="form-group">

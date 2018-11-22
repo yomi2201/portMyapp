@@ -10,9 +10,8 @@
         <h4 class="card-title">{{ $post->title }}</h4>
         <img src="{{ $post->path }}" height=150px width=300px>
         <p class="card-body">{{ $post->body }}</p>
-        <!-- <a href="/posts/{{ $post->id }}" class="card-link">詳細</a> -->
         <a href="/edit/{{ $post->id }}" class="card-link">修正</a>
-        <a href="/destroy/{{ $post->id }}" class="card-link">削除</a>
+        <a href="/delete/{{ $post->id }}" class="card-link">削除</a>
       </div>
     </div>
     @endforeach

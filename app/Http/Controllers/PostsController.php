@@ -45,7 +45,7 @@ class PostsController extends Controller
         // $post->title = $request['image']->getClientOriginalName();
         // var_dump($path);
         // dd($path);
-        $path = $request->file('image')->store('storage');
+        $path = $request->file('image')->store('public');
         $post = new Post;
         $post->title = $request->title;
         $post->body = $request->body;
@@ -104,9 +104,11 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    
+    // Need Request $request
+    public function delete(Request $request)
     {
         Post::destroy($request->id);
-        return view('posts.destroy');
+        return view('posts.delete');
     }
 }
