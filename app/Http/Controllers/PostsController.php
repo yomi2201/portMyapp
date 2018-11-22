@@ -18,9 +18,11 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        // $posts = Post::all();
+        // $posts = Post::orderByDesc('created_at')->get();
+        // 3. latestメソッドがおすすめ
+        $posts = Post::latest()->get();
         return view("posts.index",['posts'=> $posts]);
-        // return view("posts.index");
     }
 
     /**
@@ -104,7 +106,7 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    
+
     // Need Request $request
     public function delete(Request $request)
     {
