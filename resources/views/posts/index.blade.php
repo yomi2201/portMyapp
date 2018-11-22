@@ -8,7 +8,7 @@
     <div class="card mb-2">
       <div class="card-body">
         <h4 class="card-title">{{ $post->title }}</h4>
-        <img src="{{ $post->path }}" height=150px width=300px>
+        <img src="{{ $post->path }}" height=200px width=300px>
         <p class="card-body">{{ $post->body }}</p>
         <a href="/edit/{{ $post->id }}" class="card-link">修正</a>
         <a href="/delete/{{ $post->id }}" class="card-link">削除</a>

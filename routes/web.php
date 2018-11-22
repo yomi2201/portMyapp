@@ -17,10 +17,10 @@
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/', 'PostsController@index')->name('/');
+// Route::get('/home', 'HomeController@index')->name('home');
+Route::get('home', 'PostsController@index');
 
-Route::get('/', 'PostsController@index');
+Route::get('/', 'PostsController@index')->name('home');
 Route::get('create', 'PostsController@create');
 Route::post('create', 'PostsController@store');
 Route::get('edit/{id}', 'PostsController@edit');
